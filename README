@@ -1,0 +1,3 @@
+The log4j-sns project provides an Amazon SNS Log4j 1.2.x appender to publish logging information to SNS Topics.
+
+More information available at the project wiki at https://github.com/insula/log4j-sns/wiki
