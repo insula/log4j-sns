@@ -132,7 +132,7 @@ public class SNSAppender extends AppenderSkeleton {
 	private String createMessage(LoggingEvent event) {
 		StringBuilder sb = new StringBuilder();
 		appendMessageHeader(sb);
-		appendMessageEvent(event, sb);
+		appendMessageEvent(sb, event);
 		appendThrowableMessageBody(sb, event);
 		appendMessageFooter(sb);
 		return cutMessageTextIfExceedsMaximum(sb);
@@ -145,7 +145,7 @@ public class SNSAppender extends AppenderSkeleton {
 		}
 	}
 
-	private void appendMessageEvent(LoggingEvent event, StringBuilder sb) {
+	private void appendMessageEvent(StringBuilder sb, LoggingEvent event) {
 		sb.append(layout.format(event));
 	}
 
