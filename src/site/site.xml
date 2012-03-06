@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd">
+	<poweredBy>
+		<logo name="Maven" href="http://maven.apache.org/" img="http://maven.apache.org/images/logos/maven-feather.png"/>
+	</poweredBy>	
+	<skin>
+		<groupId>org.apache.maven.skins</groupId>
+		<artifactId>maven-fluido-skin</artifactId>
+		<version>1.1</version>
+	</skin>
+	<custom>
+		<fluidoSkin>
+			<sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+			<gitHub>
+				<projectId>insula/log4j-sns</projectId>
+				<ribbonOrientation>right</ribbonOrientation>
+				<ribbonColor>green</ribbonColor>
+			</gitHub>
+    	</fluidoSkin>
+	</custom>
+	<body>
+		<head/>
+		<menu name="Overview">
+			<item name="GitHub Project" href="https://github.com/insula/log4j-sns" target="_blank"/>
+			<item name="Wiki" href="https://github.com/insula/log4j-sns/wiki" target="_blank"/>
+		</menu>
+		<menu name="Created by">
+			<item name="Edson Yanaga" href="http://www.yanaga.com.br" target="_blank"/>
+		</menu>
+		<menu name="Sponsorship">
+			<item name="Insula Tecnologia" href="http://insula.com.br" target="_blank"/>
+		</menu>
+		<menu ref="reports"/>
+	</body>
+</project>
