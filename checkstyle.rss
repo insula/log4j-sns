@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>log4j-sns - Checkstyle report</title>
+    <link>https://github.com/insula/log4j-sns</link>
+    <description>log4j-sns - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2012 Insula Tecnologia</copyright>
+    <item>
+      <title>File: 3,
+             Errors: 250,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>https://github.com/insula/log4j-sns/checkstyle.html</link>
+      <description>
+        <p>Click <a href="https://github.com/insula/log4j-sns/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="https://github.com/insula/log4j-sns/checkstyle.html#br.com.insula.log4j.sns.SNSAppender.java">br/com/insula/log4j/sns/SNSAppender.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  206
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/insula/log4j-sns/checkstyle.html#br.com.insula.log4j.sns.DaemonThreadFactory.java">br/com/insula/log4j/sns/DaemonThreadFactory.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/insula/log4j-sns/checkstyle.html#br.com.insula.log4j.sns.QuietPeriodTriggeringEventEvaluator.java">br/com/insula/log4j/sns/QuietPeriodTriggeringEventEvaluator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  34
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
