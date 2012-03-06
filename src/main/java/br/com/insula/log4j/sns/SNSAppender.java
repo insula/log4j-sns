@@ -18,9 +18,6 @@
  */
 package br.com.insula.log4j.sns;
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-
 import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.Layout;
 import org.apache.log4j.helpers.OptionConverter;
@@ -28,7 +25,6 @@ import org.apache.log4j.spi.LoggingEvent;
 import org.apache.log4j.spi.TriggeringEventEvaluator;
 
 import com.amazonaws.AmazonClientException;
-import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.sns.AmazonSNSAsync;
 import com.amazonaws.services.sns.AmazonSNSAsyncClient;
@@ -38,8 +34,6 @@ import com.amazonaws.services.sns.model.PublishRequest;
 public class SNSAppender extends AppenderSkeleton {
 
 	private static final int SNS_MAXIMUM_MESSAGE_SIZE = 64 * 1024;
-
-	private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2, new DaemonThreadFactory());
 
 	private TriggeringEventEvaluator evaluator;
 
@@ -114,14 +108,13 @@ public class SNSAppender extends AppenderSkeleton {
 
 	private void createEvaluatorIfNeeded() {
 		if (this.evaluator == null) {
-			this.evaluator = new QuietPeriodTriggeringEventEvaluator(executorService);
+			this.evaluator = new QuietPeriodTriggeringEventEvaluator();
 		}
 	}
 
 	private void createAmazonSNSAsyncIfNeeded() {
 		if (this.amazonSNSAsync == null) {
-			AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
-			this.amazonSNSAsync = new AmazonSNSAsyncClient(credentials, executorService);
+			this.amazonSNSAsync = new AmazonSNSAsyncClient(new BasicAWSCredentials(accessKey, secretKey));
 		}
 	}
 
